@@ -1,5 +1,6 @@
 # Ignored folders
 .next
+.vercel
 node_modules
 
 # Ignored files
