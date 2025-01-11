@@ -1,0 +1,7 @@
+# Ignored folders
+.next
+node_modules
+
+# Ignored files
+.env
+tsconfig.tsbuildinfo

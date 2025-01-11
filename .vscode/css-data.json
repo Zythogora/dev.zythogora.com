@@ -1,0 +1,17 @@
+{
+  "version": 1.0,
+  "atDirectives": [
+    {
+      "name": "@config",
+      "description": "Use the @config directive to specify Tailwind's custom configuration path."
+    },
+    {
+      "name": "@tailwind",
+      "description": "Use the @tailwind directive to insert Tailwind's `base`, `components`, `utilities`, and `screens` styles into your CSS."
+    },
+    {
+      "name": "@apply",
+      "description": "Use @apply to inline any existing utility classes into your own custom CSS."
+    }
+  ]
+}

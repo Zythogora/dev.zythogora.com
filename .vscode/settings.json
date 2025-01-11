@@ -1,0 +1,35 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "editor.suggestSelection": "first",
+  "eslint.useFlatConfig": false,
+  "eslint.validate": ["typescript", "typescriptreact"],
+  "eslint.workingDirectories": [
+    {
+      "changeProcessCWD": true,
+      "directory": "./"
+    }
+  ],
+  "files.exclude": {
+    ".next": true,
+    "node_modules": true
+  },
+  "javascript.format.enable": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.validate.enable": false,
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "css.customData": ["./.vscode/css-data.json"],
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "i18n-ally.enabledFrameworks": ["next-intl"],
+  "i18n-ally.localesPaths": ["src/translations"],
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.displayLanguage": "fr",
+  "i18n-ally.sourceLanguage": "fr"
+}
