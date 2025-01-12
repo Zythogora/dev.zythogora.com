@@ -11,6 +11,7 @@ module.exports = {
     "plugin:tailwindcss/recommended",
   ],
   plugins: [
+    "@stylistic",
     "unused-imports",
     "no-relative-import-paths",
     "import",
@@ -72,6 +73,10 @@ module.exports = {
     "@typescript-eslint/space-before-function-paren": "off",
     "@typescript-eslint/space-infix-ops": "off",
     "@typescript-eslint/object-curly-spacing": "off",
+
+    // @stylistic
+    "@stylistic/quotes": ["error", "double"],
+    "@stylistic/semi": ["error", "always"],
 
     // eslint
     "arrow-body-style": "off",

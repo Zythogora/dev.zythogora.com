@@ -15,6 +15,8 @@ const PostHogProvider = ({ children }: PropsWithChildren) => {
     api_host: config.posthog.reverseProxy,
     ui_host: config.posthog.host,
     person_profiles: "always",
+    // Add a cookie to persist the consent to analytics on registration
+    persistence: "memory",
   });
 
   return <PHProvider client={posthog}>{children}</PHProvider>;

@@ -9,11 +9,11 @@ const loadClientConfig = () => {
 
   if (!parseResult.success) {
     const errors = parseResult.error.issues.map(
-      (issue) => ` - ${issue.path.join('.')}: ${issue.message}`,
+      (issue) => ` - ${issue.path.join(".")}: ${issue.message}`,
     );
 
     throw new Error(
-      `Missing required client env variables:\n\t${errors.join(',\n\t')}`,
+      `Missing required client env variables:\n\t${errors.join(",\n\t")}`,
     );
   }
 
