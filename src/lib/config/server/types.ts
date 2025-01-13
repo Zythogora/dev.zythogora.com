@@ -1,11 +1,11 @@
-import { z } from 'zod';
+import { z } from "zod";
 
-import { clientSideSchema } from '@/lib/config/client/types';
+import { clientSideSchema } from "@/lib/config/client/types";
 
 export enum NodeEnv {
-  production = 'production',
-  development = 'development',
-  test = 'test',
+  production = "production",
+  development = "development",
+  test = "test",
 }
 
 export const serverSideSchema = clientSideSchema.extend({

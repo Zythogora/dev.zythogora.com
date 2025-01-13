@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
   skipTrailingSlashRedirect: true,
   async rewrites() {
     const postHogReverseProxy = "/ingest";
-    const postHogHost = "https://us.i.posthog.com";
+    const postHogHost = "https://eu.i.posthog.com";
     return [
       {
         source: `${postHogReverseProxy}/static/:path*`,
