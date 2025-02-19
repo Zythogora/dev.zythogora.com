@@ -4,23 +4,48 @@
 
 :root {
   --foreground: var(--color-stone-950);
-  --background: var(--color-stone-50);
+  --foreground-muted: var(--color-stone-400);
 
-  --primary: oklch(80.16% 0.1705 73.27);
+  --background: var(--color-stone-50);
+  --background-muted: var(--color-stone-200);
+
+  --destructive: var(--color-red-700);
 }
 
 .dark {
   --foreground: var(--color-stone-50);
+  --foreground-muted: var(--color-stone-300);
+
   --background: var(--color-stone-800);
+  --background-muted: var(--color-stone-600);
+
+  --destructive: var(--color-red-400);
 }
 
 @theme inline {
-  --color-foreground: var(--foreground);
-  --color-background: var(--background);
+  --primary: oklch(80.16% 0.171 73.27);
   --color-primary: var(--primary);
+
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+
+  --color-background: var(--background);
+  --color-background-muted: var(--background-muted);
+
+  --color-destructive: var(--destructive);
 
   --font-title: var(--font-title);
   --font-paragraph: var(--font-paragraph);
+
+  --base-radius: 0.5rem;
+  --radius-xs: calc(var(--base-radius) * 0.25);
+  --radius-sm: calc(var(--base-radius) * 0.5);
+  --radius-md: calc(var(--base-radius) * 0.75);
+  --radius: var(--base-radius);
+  --radius-lg: calc(var(--base-radius) * 1.5);
+  --radius-xl: calc(var(--base-radius) * 2);
+  --radius-2xl: calc(var(--base-radius) * 3);
+  --radius-3xl: calc(var(--base-radius) * 4);
 
   --drop-shadow: 0 2px 0 var(--color-foreground);
 }
