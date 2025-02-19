@@ -1,0 +1,25 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["prismaSchemaFolder", "multiSchema"]
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+  schemas   = ["public", "beer_data"]
+}
+
+model Users {
+  id       String @id
+  username String @unique
+
+  CreatedBeers Beers[] @relation("created_beers")
+  UpdatedBeers Beers[] @relation("updated_beers")
+
+  CreatedBreweries Breweries[] @relation("created_breweries")
+  UpdatedBreweries Breweries[] @relation("updated_breweries")
+
+  @@map("users")
+  @@schema("public")
+}
