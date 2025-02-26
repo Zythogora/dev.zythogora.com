@@ -17,8 +17,10 @@ export const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          "bg-primary border-primary-700 before:bg-primary-700 text-stone-950",
+        default: cn(
+          "bg-primary border-stone-950 text-stone-950 before:bg-stone-950",
+          "dark:border-primary-700 dark:before:bg-primary-700",
+        ),
         outline: cn(
           "bg-background border-foreground before:bg-foreground dark:bg-stone-700",
         ),

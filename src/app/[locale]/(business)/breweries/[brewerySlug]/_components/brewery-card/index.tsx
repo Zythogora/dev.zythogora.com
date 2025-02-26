@@ -11,7 +11,7 @@ interface BreweryCardProps {
   };
 }
 
-const BeerCard = async ({ name, country }: BreweryCardProps) => {
+const BreweryCard = async ({ name, country }: BreweryCardProps) => {
   const t = await getTranslations();
 
   return (
@@ -33,4 +33,4 @@ const BeerCard = async ({ name, country }: BreweryCardProps) => {
   );
 };
 
-export default BeerCard;
+export default BreweryCard;

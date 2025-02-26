@@ -80,7 +80,10 @@ const ResetPasswordForm = ({ token }: ResetPasswordFormProps) => {
               )}
             >
               <Input
-                {...getInputProps(fields.password, { type: "password" })}
+                {...getInputProps(fields.password, {
+                  type: "password",
+                  ariaAttributes: true,
+                })}
                 key={fields.password.key}
                 disabled={isPending}
                 placeholder={t("form.fields.password.placeholder")}
@@ -88,7 +91,10 @@ const ResetPasswordForm = ({ token }: ResetPasswordFormProps) => {
               />
 
               <Input
-                {...getInputProps(fields.confirmPassword, { type: "password" })}
+                {...getInputProps(fields.confirmPassword, {
+                  type: "password",
+                  ariaAttributes: true,
+                })}
                 key={fields.confirmPassword.key}
                 disabled={isPending}
                 placeholder={t("form.fields.confirmPassword.placeholder")}
