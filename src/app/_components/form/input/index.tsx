@@ -7,10 +7,11 @@ import { cn } from "@/lib/tailwind";
 
 interface FormInputProps {
   label: string;
-  placeholder: string;
   type: Parameters<typeof getInputProps>[1]["type"];
   field: FieldMetadata;
+  placeholder?: string;
   disabled?: boolean;
+  showOptional?: boolean;
   className?: string;
 }
 
@@ -20,15 +21,22 @@ const FormInput = ({
   type,
   field,
   disabled,
+  showOptional = false,
   className,
 }: FormInputProps) => {
   return (
     <div className={cn("group/form-input", "flex flex-col gap-y-1", className)}>
-      <Label htmlFor={field.id}>{label}</Label>
+      <Label
+        htmlFor={field.id}
+        required={field.required}
+        showOptional={showOptional}
+      >
+        {label}
+      </Label>
 
       <div>
         <Input
-          {...getInputProps(field, { ariaAttributes: true, type })}
+          {...getInputProps(field, { type, ariaAttributes: true })}
           key={field.key}
           disabled={disabled}
           placeholder={placeholder}

@@ -49,6 +49,7 @@
         "placeholder": "Confirm password"
       },
       "countrySelect": {
+        "searchPlaceholder": "Search for a country",
         "noResult": "No country found"
       }
     },
@@ -58,6 +59,7 @@
       "PASSWORD_TOO_SHORT": "The password has to be at least 8 characters long",
       "PASSWORD_TOO_LONG": "The password cannot be longer than 1024 characters",
       "PASSWORDS_DO_NOT_MATCH": "The passwords do not match",
+      "URL_INVALID": "The URL is invalid",
       "UNKNOWN_ERROR": "An unknown error occurred"
     }
   },
