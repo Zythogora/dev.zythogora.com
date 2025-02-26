@@ -55,6 +55,7 @@
       "PASSWORD_TOO_SHORT": "Le mot de passe doit contenir au moins 8 caractères",
       "PASSWORD_TOO_LONG": "Le mot de passe ne peut pas contenir plus de 1024 caractères",
       "PASSWORDS_DO_NOT_MATCH": "Les mots de passe ne correspondent pas",
+      "URL_INVALID": "L'URL est invalide",
       "UNKNOWN_ERROR": "Une erreur inconnue est survenue"
     }
   },

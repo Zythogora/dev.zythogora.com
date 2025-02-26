@@ -4,21 +4,39 @@ import { cn } from "@/lib/tailwind";
 
 import type { ComponentProps } from "react";
 
+interface LabelProps extends ComponentProps<typeof LabelPrimitive.Root> {
+  required?: boolean;
+  showOptional?: boolean;
+}
+
 const Label = ({
   className,
+  required = false,
+  showOptional = false,
+  children,
   ...restProps
-}: ComponentProps<typeof LabelPrimitive.Root>) => {
+}: LabelProps) => {
   return (
     <LabelPrimitive.Root
       data-slot="label"
       className={cn(
-        "font-title pl-3 text-base font-medium select-none",
+        "font-title gap-x-title-space relative flex items-baseline pl-3 text-base select-none",
         "md:text-lg",
         "peer-disabled:pointer-events-none peer-disabled:cursor-not-allowed peer-disabled:opacity-50",
         className,
       )}
       {...restProps}
-    />
+    >
+      {required ? (
+        <span className="text-destructive absolute left-0">*</span>
+      ) : null}
+
+      <span className="font-medium">{children}</span>
+
+      {!required && showOptional ? (
+        <span className="text-foreground-muted text-xs">(optional)</span>
+      ) : null}
+    </LabelPrimitive.Root>
   );
 };
 
