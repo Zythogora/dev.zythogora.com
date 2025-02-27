@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { getLocale } from "next-intl/server";
 
-import BeerCard from "@/app/[locale]/(business)/breweries/[brewerySlug]/beers/[beerSlug]/_components/beer-card";
+import BeerCard from "@/app/[locale]/(business)/(app-with-header)/breweries/[brewerySlug]/beers/[beerSlug]/_components/beer-card";
 import { getBeerBySlug } from "@/domain/beers";
 import { config } from "@/lib/config";
 import { publicConfig } from "@/lib/config/client-config";
