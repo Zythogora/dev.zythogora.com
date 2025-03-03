@@ -238,7 +238,7 @@ const CreateBreweryPage = () => {
             <Button
               type="submit"
               disabled={isPending}
-              className="col-span-2 mt-2 w-full @3xl:col-span-7"
+              className={cn("mt-2", "col-span-2 @3xl:col-span-7")}
             >
               {isPending
                 ? t("createBreweryPage.actions.submitting")

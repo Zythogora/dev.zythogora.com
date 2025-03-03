@@ -7,10 +7,13 @@ import {
   InvalidSlugError,
   UnknownBeerError,
 } from "@/domain/beers/errors";
-import { transformRawBeerToBeer } from "@/domain/beers/transforms";
+import {
+  transformRawBeerToBeer,
+  transformRawStyleCategoryToStyleCategory,
+} from "@/domain/beers/transforms";
 import prisma from "@/lib/prisma";
 
-import type { Beer } from "@/domain/beers/types";
+import type { Beer, Color, StyleCategory } from "@/domain/beers/types";
 
 export const getBeerBySlug = cache(
   async (beerSlug: string, brewerySlug: string): Promise<Beer> => {
@@ -59,3 +62,16 @@ export const getBeerBySlug = cache(
     return transformRawBeerToBeer(beer);
   },
 );
+
+export const getColors = cache(async (): Promise<Color[]> => {
+  return prisma.colors.findMany();
+});
+
+export const getStyles = cache(async (): Promise<StyleCategory[]> => {
+  const categories = await prisma.styleCategories.findMany({
+    include: { styles: { orderBy: { name: "asc" } } },
+    orderBy: { name: "asc" },
+  });
+
+  return categories.map(transformRawStyleCategoryToStyleCategory);
+});

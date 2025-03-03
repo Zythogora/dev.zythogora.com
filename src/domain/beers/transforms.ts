@@ -2,7 +2,12 @@
 
 import { getCountry } from "@/lib/i18n/countries";
 
-import type { Beer, RawBeer } from "@/domain/beers/types";
+import type {
+  Beer,
+  RawBeer,
+  RawStyleCategory,
+  StyleCategory,
+} from "@/domain/beers/types";
 
 export const transformRawBeerToBeer = async (
   rawBeer: RawBeer,
@@ -20,7 +25,19 @@ export const transformRawBeerToBeer = async (
   abv: rawBeer.abv,
   ibu: rawBeer.ibu ?? undefined,
   color: {
+    id: rawBeer.color.id,
     name: rawBeer.color.name,
     hex: rawBeer.color.hex,
   },
+});
+
+export const transformRawStyleCategoryToStyleCategory = (
+  rawStyleCategory: RawStyleCategory,
+): StyleCategory => ({
+  id: rawStyleCategory.id,
+  name: rawStyleCategory.name,
+  styles: rawStyleCategory.styles.map((style) => ({
+    id: style.id,
+    name: style.name,
+  })),
 });
