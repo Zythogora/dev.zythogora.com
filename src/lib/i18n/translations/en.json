@@ -52,6 +52,14 @@
       "countrySelect": {
         "searchPlaceholder": "Search for a country",
         "noResult": "No country found"
+      },
+      "styleSelect": {
+        "searchPlaceholder": "Search for a style",
+        "noResult": "No matching style"
+      },
+      "colorSelect": {
+        "searchPlaceholder": "Search for a color",
+        "noResult": "No color found"
       }
     },
     "errors": {
@@ -220,6 +228,43 @@
     "404": {
       "title": "We don't know this brewery<br></br><muted>(yet)</muted> :(",
       "cta": "But you can <link>search</link> for another one!"
+    }
+  },
+  "createBeerPage": {
+    "title": "Add a new beer",
+    "fields": {
+      "name": {
+        "label": "Beer name"
+      },
+      "releasedIn": {
+        "label": "Released in"
+      },
+      "brewery": {
+        "label": "Brewery"
+      },
+      "style": {
+        "label": "Style"
+      },
+      "color": {
+        "label": "Color"
+      },
+      "abv": {
+        "label": "ABV"
+      },
+      "ibu": {
+        "label": "IBU"
+      },
+      "description": {
+        "label": "Description"
+      }
+    },
+    "actions": {
+      "submit": "Create beer",
+      "submitting": "Creating beer..."
+    },
+    "errors": {
+      "MIN_CREATION_YEAR_ERROR": "The creation year cannot be before the year 1000",
+      "MAX_CREATION_YEAR_ERROR": "The creation year cannot be in the future"
     }
   },
   "createBreweryPage": {

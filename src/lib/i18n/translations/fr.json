@@ -52,6 +52,14 @@
       "countrySelect": {
         "searchPlaceholder": "Rechercher un pays",
         "noResult": "Aucun pays trouvé"
+      },
+      "styleSelect": {
+        "searchPlaceholder": "Rechercher un style",
+        "noResult": "Aucun style correspondant"
+      },
+      "colorSelect": {
+        "searchPlaceholder": "Rechercher une couleur",
+        "noResult": "Aucune couleur trouvée"
       }
     },
     "errors": {
@@ -220,6 +228,43 @@
     "404": {
       "title": "On ne connait pas <muted>(encore)</muted><br></br>cette brasserie :(",
       "cta": "Mais tu peux en <link>chercher</link> une autre !"
+    }
+  },
+  "createBeerPage": {
+    "title": "Ajouter une nouvelle bière",
+    "fields": {
+      "name": {
+        "label": "Nom de la bière"
+      },
+      "releasedIn": {
+        "label": "Sortie en"
+      },
+      "brewery": {
+        "label": "Brasserie"
+      },
+      "style": {
+        "label": "Style"
+      },
+      "color": {
+        "label": "Couleur"
+      },
+      "abv": {
+        "label": "Degré"
+      },
+      "ibu": {
+        "label": "IBU"
+      },
+      "description": {
+        "label": "Description"
+      }
+    },
+    "actions": {
+      "submit": "Créer la bière",
+      "submitting": "Création en cours..."
+    },
+    "errors": {
+      "MIN_CREATION_YEAR_ERROR": "L'année de création ne peut pas être antérieure à l'an 1000",
+      "MAX_CREATION_YEAR_ERROR": "L'année de création ne peut pas être dans le futur"
     }
   },
   "createBreweryPage": {
